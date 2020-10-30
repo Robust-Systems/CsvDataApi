@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="BasketCSV\baskets.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="BasketCSV\baskets.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="TinyCsvParser" Version="2.5.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="BasketCSV\baskets.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="BasketProcessor.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+</Project>
