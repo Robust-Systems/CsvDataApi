@@ -29,7 +29,7 @@ namespace DataRepository
 
       var csvString = ReadResource(CSV_FILE_NAME);
 
-      CsvReaderOptions csvReaderOptions = new CsvReaderOptions(new[] { Environment.NewLine });
+      CsvReaderOptions csvReaderOptions = new CsvReaderOptions(new[] { "\n" });
 
       Baskets = csvParser.ReadFromString(csvReaderOptions, csvString)
                          .Select(x => x.Result)
