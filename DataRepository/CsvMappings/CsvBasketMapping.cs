@@ -10,24 +10,28 @@ namespace DataRepository.CsvMappings
   {
     public CsvBasketMapping() : base()
     {
+      
+      // map the column in the same order as it is in the CSV file
 
-      MapProperty(0, x => x.TransactionNumber);
+      int colNumber = 0;
 
-      MapProperty(1, x => x.NumberOfPassengers);
+      MapProperty(colNumber++, x => x.TransactionNumber);
 
-      MapProperty(2, x => x.Domain);
+      MapProperty(colNumber++, x => x.NumberOfPassengers);
 
-      MapProperty(3, x => x.AgentId);
+      MapProperty(colNumber++, x => x.Domain);
 
-      MapProperty(4, x => x.ReferrerUrl);
+      MapProperty(colNumber++, x => x.AgentId);
 
-      MapProperty(5, x => x.CreatedDateTime);
+      MapProperty(colNumber++, x => x.ReferrerUrl);
 
-      MapProperty(6, x => x.UserId);
+      MapProperty(colNumber++, x => x.CreatedDateTime);
 
-      MapProperty(7, x => x.SelectedCurrency);
+      MapProperty(colNumber++, x => x.UserId);
 
-      MapProperty(8, x => x.ReservationSystem);
+      MapProperty(colNumber++, x => x.SelectedCurrency);
+
+      MapProperty(colNumber++, x => x.ReservationSystem);
 
     }
   }

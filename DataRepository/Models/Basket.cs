@@ -4,8 +4,10 @@ using System.Text;
 
 namespace DataRepository.Models
 {
+  // this class represents the data in the 'baskets' CSV file
   public class Basket
   {
+
     public string TransactionNumber { get; set; }
 
     public int? NumberOfPassengers { get; set; }

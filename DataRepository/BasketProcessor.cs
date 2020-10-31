@@ -36,7 +36,7 @@ namespace DataRepository
                          .ToList();
     }
 
-    public string ReadResource(string resourceName)
+    public static string ReadResource(string resourceName)
     {
       // Determine path
       var assembly = Assembly.GetExecutingAssembly();
